@@ -18,6 +18,7 @@ The goal is to determine:
 
 ## Project Structure
 
+```
 primetrade-assignment/
 ├─ data/                      # Raw datasets
 ├─ notebooks/
@@ -27,6 +28,8 @@ primetrade-assignment/
 ├─ requirements.txt
 ├─ README.md
 └─ summary.md                 # 1-page findings and recommendations
+```
+
 
 ---
 
