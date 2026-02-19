@@ -8,6 +8,11 @@ from scipy import stats
 st.set_page_config(page_title="Trader vs Sentiment Analysis", layout="wide")
 
 st.title("Trader Performance vs Market Sentiment")
+st.markdown("""
+### Executive Summary
+High-risk traders significantly outperform during Fear regimes (p = 0.024), with superior risk-adjusted returns.
+Sentiment acts as a volatility amplifier rather than a direct return predictor.
+""")
 
 # =========================
 # LOAD DATA
@@ -93,12 +98,20 @@ st.write(risk_adj)
 # =========================
 # VISUALS
 # =========================
+win_rate_high = high_risk.groupby('sentiment')['win_rate'].mean()
+
+st.subheader("High-Risk Average Win Rate")
+st.write(win_rate_high)
 
 st.subheader("High Risk PnL Distribution")
 
 fig, ax = plt.subplots()
 sns.boxplot(data=high_risk, x='sentiment', y='daily_pnl', ax=ax)
 ax.set_yscale("symlog")
+ax.set_ylabel("Daily PnL (Log Scale)")
+ax.set_xlabel("Sentiment")
+ax.set_title("High-Risk Trader Daily PnL Distribution")
+
 st.pyplot(fig)
 
 st.subheader("Segment Comparison")
