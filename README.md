@@ -84,19 +84,33 @@ See `summary.md` for full detailed write-up.
 
 ## How to Run
 
-### Run Notebook
+### 1. Install Dependencies
 
-Open:
-
-notebooks/prime_trade_assignment.ipynb
-
-Run all cells from top to bottom.
-
-All output charts and tables will be saved in the `results/` folder.
+pip install -r requirements.txt
 
 ---
 
-### Run Streamlit Dashboard (Optional)
+### 2. Run the Notebook
+
+From the project root directory:
+
+cd notebooks
+
+Then launch Jupyter:
+
+jupyter notebook
+
+Open:
+
+prime_trade_assignment.ipynb
+
+Run all cells from top to bottom.
+
+All output charts and tables will automatically be saved in the `results/` directory.
+
+---
+
+### Run Streamlit Dashboard
 
 From project root directory:
 
