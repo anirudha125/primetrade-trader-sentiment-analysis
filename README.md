@@ -27,7 +27,7 @@ primetrade-assignment/
 ├─ streamlit_app.py           # Interactive dashboard (bonus)
 ├─ requirements.txt
 ├─ README.md
-└─ summary.md                 # 1-page findings and recommendations
+└─ summary.md                 # findings and recommendation
 ```
 
 
